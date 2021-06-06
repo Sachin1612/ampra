@@ -1,0 +1,56 @@
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+.form-group > .form-control > input {
+  width: 100%;
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid var(--gray);
+  border-radius: 4px;
+  border-left: 5px solid var(--blue);
+}
+
+.form-group > button[type=submit] {
+  width: 100%;
+  background-color: var(--green);
+  color:  var(--white);
+  font-weight: 600;
+  font-size: 15px;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-group > button[type=submit]:hover {
+  opacity: 0.9;
+}
+
+.form-group > label {
+  width: 250px;
+}
+
+.form-group > .form-control > .error {
+  max-width: fit-content;
+}
+
+/* For invalid field */
+.form-group.invalid > .form-control > input {
+  border-left-color: var(--red);
+}
+.form-group.invalid > .form-control > input:focus {
+  box-shadow: 0 0 2px var(--red);
+  border-left-color: var(--red);
+}
+.form-group.invalid > .form-control > .error {
+  color: var(--red);
+  font-size: 12px;
+}
